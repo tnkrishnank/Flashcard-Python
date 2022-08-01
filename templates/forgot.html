@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{fo}}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../static/images/icons/flashcard_icon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login0">
+            {% if enterEmail %}
+			    <div class="wrap-login0 d-flex justify-content-center">
+				    <form class="login0-form validate-form" method="post">
+					    <span class="login0-form-title">
+						    ENTER YOUR MAIL ID
+					    </span>
+
+                        <div class="wrap-input0">
+							<input class="input0" type="email" name="email" placeholder="Email" autofocus="autofocus" required>
+							<span class="focus-input0"></span>
+							<span class="symbol-input0">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+							</span>
+						</div>
+
+                        <span class="text-warning d-flex justify-content-center">
+							<label>{{mailMsg}}</label>
+						</span>
+
+						<div class="container-login0-form-btn pt-0">
+							<button class="login0-form-btn" name="submitButton" value="sendOTP" type="submit">
+								SUBMIT
+							</button>
+						</div>
+
+						<div class="text-center p-t-80">
+							<a class="txt2" href="/">
+								<i class="fa fa-long-arrow-left m-r-5" aria-hidden="true"></i>
+                            	GO TO LOGIN
+							</a>
+						</div>
+					</form>
+				</div>
+            {% else %}
+                {% if enterOTP %}
+                    <div class="wrap-login0 d-flex justify-content-center">
+                        <form class="login0-form validate-form" method="post">
+                            <span class="login0-form-title">
+                                OTP SENT SUCCESSFULLY
+                            </span>
+
+                            <div class="wrap-input0">
+                                <input class="input0" type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="otp" placeholder="OTP" autofocus="autofocus" required>
+                                <span class="focus-input0"></span>
+                                <span class="symbol-input0">
+                                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                                </span>
+                            </div>
+
+                            <span class="text-warning d-flex justify-content-center">
+                                <label>{{otpMsg}}</label>
+                            </span>
+
+                            <div class="container-login0-form-btn pt-0">
+                                <button class="login0-form-btn" name="submitButton" value="checkOTP" type="submit">
+                                    SUBMIT
+                                </button>
+                            </div>
+
+                            <div class="text-center p-t-80">
+                                <a class="txt2" href="/">
+                                    <i class="fa fa-long-arrow-left m-r-5" aria-hidden="true"></i>
+                                    GO TO LOGIN
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                {% else %}
+                    <div class="wrap-login0 d-flex justify-content-center">
+                        <form class="login0-form validate-form" method="post">
+                            <span class="login0-form-title">
+                                ENTER NEW PASSWORD
+                            </span>
+
+                            <div class="wrap-input0">
+                                <input class="input0" type="password" name="newPassword" id="pass" placeholder="New Password" autofocus="autofocus" required>
+                                <span class="focus-input0"></span>
+                                <span class="symbol-input0">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>
+                                </span>
+                            </div>
+
+                            <span class="text-warning d-flex justify-content-center">
+                                <label>{{newPasswordMsg}}</label>
+                            </span>
+
+                            <div class="wrap-input0">
+                                <input class="input0" type="password" name="re-newPassword" id="rePass" placeholder="Retype New Password" required>
+                                <span class="focus-input0"></span>
+                                <span class="symbol-input0">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>
+                                </span>
+                            </div>
+
+                            <span class="text-warning d-flex justify-content-center">
+                                <label>{{reNewPasswordMsg}}</label>
+                            </span>
+
+                            <div class="container-login0-form-btn pt-0">
+                                <button class="login0-form-btn" style="background-color: #000; color: #fff" id="sPass" onclick="showPass()" type="button">
+                                    SHOW PASSWORD
+                                </button>
+                            </div>
+
+                            <div class="container-login0-form-btn">
+                                <button class="login0-form-btn" name="submitButton" value="changePassword" type="submit">
+                                    SUBMIT
+                                </button>
+                            </div>
+
+                            <div class="text-center p-t-80">
+                                <a class="txt2" href="index.html">
+                                    <i class="fa fa-long-arrow-left m-r-5" aria-hidden="true"></i>
+                                    GO TO LOGIN
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                {% endif %}
+            {% endif %}
+		</div>
+	</div>
+	
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../static/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../static/vendor/select2/select2.min.js"></script>
+	<script src="../static/vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+	<script src="../static/js/main.js"></script>
+    <script>
+		function showPass() {
+		  var x = document.getElementById("pass");
+		  var y = document.getElementById("rePass");
+		  if (x.type === "password") {
+			x.type = "text";
+			y.type = "text";
+			document.getElementById("sPass").style.cssText = 'background-color: #fff; color: #000;';
+			document.getElementById('sPass').textContent = 'HIDE PASSWORD';
+		  } else {
+			x.type = "password";
+			y.type = "password";
+			document.getElementById("sPass").style.cssText = 'background-color: #000; color: #fff;';
+			document.getElementById('sPass').textContent = 'SHOW PASSWORD';
+		  }
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .card-container {
+            background: #343a40;
+            border-radius: 10px;
+        }
+
+        .logo {
+            width: 316px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            max-width: 100%;
+        }
+
+        .txt {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .container-otp {
+            font-size: 23px;
+            color: #fff;
+            text-align: center;
+            height: 50px;
+            width: 250px;
+            border-radius: 20px;
+            background: #5d7a8f;
+            margin: 0 auto;
+            line-height: 50px;
+        }
+
+        .copyright {
+            font-size: 15px;
+            color: #fff;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <table>
+            <tr>
+                <div class="logo">
+                    <img src="cid:flashcard_mail_logo" alt="FLASHCARD">
+                </div>
+            </tr>
+
+            <tr>
+                <div class="txt">
+                    Hello, {{ name }}
+                </div>
+            </tr>
+
+            <tr>
+                <div class="txt">
+                    Your One Time Password {{ text }} is :
+                </div>
+            </tr>
+
+            {% if forgot %}
+                <tr>
+                    <div class="txt">
+                        Username : {{ uName }}
+                    </div>
+                </tr>
+            {% endif %}
+
+            <tr>
+                <div class="container-otp">
+                    {{ otp }}
+                </div>
+            </tr>
+
+            <tr>
+                <div class="txt" style="padding: 30px;">
+                    NOTE : OTP IS ONLY VALID FOR 2 MINUTES
+                </div>
+            </tr>
+
+            <tr>
+                <div class="copyright">
+                    &copy; 2022 Flashcard
+                </div>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DASHBOARD</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../static/images/icons/flashcard_icon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login0">
+			<div class="wrap-login0 d-flex justify-content-center">
+				<form class="login0-form validate-form w-100" method="post">
+					<div class="d-flex justify-content-between align-items-center">
+						<div class="login0-form-title pl-3 pb-0" style="text-align: left !important;">
+							{{welcome}}
+						</div>
+
+						<div class="pr-0 pl-0">
+							<button class="login1-form-btn" name="logout" value="signout" type="submit">
+								LOGOUT
+							</button>
+						</div>
+					</div>
+
+					<div class="pr-2 pl-2">
+						<hr class="mb-0" color="white">
+					</div>
+
+                    <div class="container-login0-form-btn">
+						<button class="login0-form-btn" id="study" type="button">
+							STUDY
+						</button>
+					</div>
+
+                    <script type="text/javascript">
+                        document.getElementById("study").onclick = function () {
+                            location.href = "study.html";
+                        };
+                    </script>
+
+					<div class="container-login0-form-btn">
+						<button class="login0-form-btn" id="analysis" type="button">
+							ANALYSIS
+						</button>
+					</div>
+
+                    <script type="text/javascript">
+                        document.getElementById("analysis").onclick = function () {
+                            location.href = "analysis.html";
+                        };
+                    </script>
+
+					<div class="container-login0-form-btn">
+						<button class="login0-form-btn" id="addDC" type="button">
+							ADD DECK OR CARD
+						</button>
+					</div>
+
+                    <script type="text/javascript">
+                        document.getElementById("addDC").onclick = function () {
+                            location.href = "addDC.html";
+                        };
+                    </script>
+
+					<div class="container-login0-form-btn">
+						<button class="login0-form-btn" id="editDC" type="button">
+							EDIT DECK OR CARD
+						</button>
+					</div>
+
+                    <script type="text/javascript">
+                        document.getElementById("editDC").onclick = function () {
+                            location.href = "editDC.html";
+                        };
+                    </script>
+
+					<div class="container-login0-form-btn">
+						<button class="login0-form-btn" id="delDC" type="button">
+							DELETE DECK OR CARD
+						</button>
+					</div>
+
+                    <script type="text/javascript">
+                        document.getElementById("delDC").onclick = function () {
+                            location.href = "delDC.html";
+                        };
+                    </script>
+
+					<div class="container-login0-form-btn">
+						<button class="login0-form-btn" id="settings" type="button">
+							SETTINGS
+						</button>
+					</div>
+
+                    <script type="text/javascript">
+                        document.getElementById("settings").onclick = function () {
+                            location.href = "settings.html";
+                        };
+                    </script>
+
+                    <div class="text-center p-t-50">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../static/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../static/vendor/select2/select2.min.js"></script>
+	<script src="../static/vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+	<script src="../static/js/main.js"></script>
+</body>
+</html>
